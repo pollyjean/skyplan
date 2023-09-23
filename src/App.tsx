@@ -52,7 +52,7 @@ const App = () => {
             <Boards>
               <Board ref={magic.innerRef} {...magic.droppableProps}>
                 {todoList.map((item, index) => (
-                  <Draggable key={index} draggableId={`${item}-${index}`} index={index}>
+                  <Draggable key={`${item}-${index}`} draggableId={`${item}-${index}`} index={index}>
                     {(magic) => (
                       <Card ref={magic.innerRef} {...magic.dragHandleProps} {...magic.draggableProps}>
                         {item}
